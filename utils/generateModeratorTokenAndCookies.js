@@ -6,8 +6,7 @@ const generateModeratorTokenAndCookies = (res , payload)=>{
     })
     res.cookie("moderatorToken" , token , {
         httpOnly: true ,
-        secure: true,
-        sameSite: "strict",
+        secure: false,
         maxAge: 60 * 60 * 24 * 11 * 1000 
     })
 
