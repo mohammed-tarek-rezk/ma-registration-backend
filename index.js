@@ -18,8 +18,7 @@ const port = process.env.PORT || 5000
 app.use(morgan("short"))
 
 
-app.use(cors(
-      { 
+app.use(cors({ 
     credentials: true,
     origin: "https://www.masusc.com",
 }))

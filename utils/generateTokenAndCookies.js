@@ -6,7 +6,7 @@ const generateTokenAndCookies = (res , payload)=>{
     })
     res.cookie("token" , token , {
         httpOnly: true ,
-        secure: process.env.NODE_ENV === 'production',
+        secure: true,
         sameSite: "strict",
         maxAge: 60 * 60 * 24 * 7 * 1000 
     })
