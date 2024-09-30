@@ -20,7 +20,7 @@ app.use(morgan("short"))
 
 app.use(cors({ 
     credentials: true,
-    origin: "https://www.masusc.com",
+    origin: "*",
 }))
 app.use(cookieParser())
 app.use(express.json())
