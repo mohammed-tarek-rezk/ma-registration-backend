@@ -7,7 +7,7 @@ const generateTokenAndCookies = (res , payload)=>{
     res.cookie("token" , token , {
         httpOnly: true ,
         secure: true,
-        sameSite: "strict",
+        sameSite: "None",
         maxAge: 60 * 60 * 24 * 7 * 1000 
     })
 
