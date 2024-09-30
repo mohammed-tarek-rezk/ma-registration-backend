@@ -17,22 +17,11 @@ const port = process.env.PORT || 5000
 
 app.use(morgan("short"))
 
-const corsOptions = {
-    credentials: true,
-    origin: function (origin, callback) {
-      // Check if the incoming origin is in the allowedOrigins array
-      if (!origin || allowedOrigins.includes(origin)) {
-        callback(null, true); // Accept the request
-      } else {
-        callback(new Error('Not allowed by CORS')); // Reject the request
-      }
-    }
-  };
 
 app.use(cors(
       { 
     credentials: true,
-    origin: process.env.FRONT_URL,
+    origin: "https://www.masusc.com",
 }))
 app.use(cookieParser())
 app.use(express.json())
